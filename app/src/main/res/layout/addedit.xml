@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:stretchColumns="1"
+        android:layout_weight="70"
+        android:layout_marginLeft="10dp">
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Name: "/>
+            <EditText
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Image File: "/>
+            <EditText
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Address: "/>
+            <EditText
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Mobile: "/>
+            <EditText
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Email: "/>
+            <EditText
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="SAVE"
+                android:layout_span="2"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
