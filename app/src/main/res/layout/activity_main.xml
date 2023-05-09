@@ -10,17 +10,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="TAFE"
+        android:text="@string/tafe"
         android:gravity="center_vertical|center_horizontal"
         android:textSize="48sp"
-        android:textColor="@color/red"
+        android:textColor="#ff0000"
         android:textStyle="bold"
-        android:layout_weight="20"/>
+        android:layout_weight="10"/>
     <ListView
+        android:id="@+id/lstView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="80"/>
-
-
-
+        android:layout_weight="90"/>
 </LinearLayout>
