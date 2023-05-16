@@ -84,19 +84,17 @@ class ADDEDIT:Activity(), View.OnClickListener {
     private fun addContact() {
         // read values from edit text and assign to contact object
         val person = Person()
-        person.name = binding.etName.text.toString()
-        person.mobile = binding.etMobile.text.toString()
-        person.address = binding.etAddress.text.toString()
-        person.email = binding.etEmail.text.toString()
-        person.imageFile = binding.etImageFile.text.toString()
-
+        person.name =       binding.etName.text.toString()
+        person.mobile =     binding.etMobile.text.toString()
+        person.address =    binding.etAddress.text.toString()
+        person.email =      binding.etEmail.text.toString()
+        person.imageFile =  binding.etImageFile.text.toString()
         // call dbHandler function to add
         dbh.addPerson(person)
         // display confirmation
         Toast.makeText(this,"New Person created",
             Toast.LENGTH_LONG).show()
         goBack()
-
     }
 
     private fun goBack() {

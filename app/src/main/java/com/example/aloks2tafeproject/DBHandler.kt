@@ -23,7 +23,7 @@ class DBHandler(context: Context, factory: SQLiteDatabase.CursorFactory?)
 
         override fun onCreate(db: SQLiteDatabase) {
             // create sql statement for table
-            val createTable:String = "CREATE TABLE $tableName($keyID INTEGER PRIMARY KEY AUTOINCREMENT, $keyName TEXT, $keyImageFile TEXT, $keyAddress TEXT,$keyMobile TEXT, $keyEmail TEXT)"
+            val createTable = "CREATE TABLE $tableName($keyID INTEGER PRIMARY KEY AUTOINCREMENT, $keyName TEXT, $keyImageFile TEXT, $keyAddress TEXT,$keyMobile TEXT, $keyEmail TEXT)"
             // execute sql
             db.execSQL(createTable)
             // add one sample record using ContentValue object
@@ -91,7 +91,6 @@ class DBHandler(context: Context, factory: SQLiteDatabase.CursorFactory?)
             cv.put(keyAddress,person.address)
             cv.put(keyMobile,person.mobile)
             cv.put(keyEmail,person.email)
-
             // use insert method
             db.insert(tableName,null, cv)
             // close db

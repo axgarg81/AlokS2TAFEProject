@@ -1,5 +1,6 @@
 package com.example.aloks2tafeproject
 
+import android.annotation.SuppressLint
 import android.content.Context
 
 import android.view.LayoutInflater
@@ -30,15 +31,17 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
         return position.toLong()
     }
 
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
-        var convertView = convertView
-        convertView = LayoutInflater.from(context).inflate(R.layout.row_item,
+        //val cView: View?
+        val cView = LayoutInflater.from(context).inflate(R.layout.row_item,
             parent, false)
-        txtName = convertView.findViewById(R.id.name)
-        txtAddress = convertView.findViewById(R.id.address)
-        txtEmail = convertView.findViewById(R.id.email)
-        txtMobile = convertView.findViewById(R.id.mobile)
-        ivImage = convertView.findViewById(R.id.imageFile)
+        txtName = cView.findViewById(R.id.name)
+
+        txtAddress = cView.findViewById(R.id.address)
+        txtEmail = cView.findViewById(R.id.email)
+        txtMobile = cView.findViewById(R.id.mobile)
+        ivImage = cView.findViewById(R.id.imageFile)
         txtName.text = arrayList[position].name
         txtAddress.text = arrayList[position].address
         txtMobile.text = arrayList[position].mobile
@@ -47,7 +50,7 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
         ivImage.setImageResource(context.resources.getIdentifier(
             arrayList[position].imageFile, "drawable",
             "com.example.aloks2tafeproject"))
-        return convertView
+        return cView
     }
 
 }

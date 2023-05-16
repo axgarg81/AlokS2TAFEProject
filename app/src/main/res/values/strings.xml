@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">HR Manager</string>
     <string name="tafe">TAFE</string>
+    <string name="image_of_the_person">Image of the Person</string>
+    <string name="id_of_the_person">Id of the person</string>
+    <string name="photo_of_employee">Photo of Employee</string>
 </resources>

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="30"
-        android:contentDescription="Photo of Employee"/>
+        android:contentDescription="@string/photo_of_employee"/>
     <TableLayout
         android:layout_margin="10dp"
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 android:enabled="false"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:autofillHints="id of emp"/>
+                android:hint="@string/id_of_the_person"/>
         </TableRow>
         <TableRow>
             <TextView
