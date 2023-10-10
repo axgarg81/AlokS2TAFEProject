@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     // create arrays for contact object and ids
     private var personList:MutableList<Person> = arrayListOf()
     private var idList:MutableList<Int> = arrayListOf()
+    // create Menu values
     private val menuAdd = Menu.FIRST+1
     private val menuEdit = Menu.FIRST+2
     private val menuRemove = Menu.FIRST+3
@@ -29,11 +30,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        // set context menu for listview
         registerForContextMenu(binding.lstView)
+        // load the existing data in Listview function
         initAdapter()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // add option menu
         menu.add(Menu.NONE,menuAdd,Menu.NONE,"ADD")
         return super.onCreateOptionsMenu(menu)
     }
@@ -50,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         v: View?,
         menuInfo: ContextMenu.ContextMenuInfo?
     ) {
+        // add context menu
         menu.add(Menu.NONE,menuEdit,Menu.NONE,"EDIT")
         menu.add(Menu.NONE,menuRemove,Menu.NONE,"DELETE")
         super.onCreateContextMenu(menu, v, menuInfo)

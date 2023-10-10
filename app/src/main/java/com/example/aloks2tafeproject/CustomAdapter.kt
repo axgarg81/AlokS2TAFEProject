@@ -13,7 +13,8 @@ import android.widget.TextView
 
 
 //Class MyAdapter
-class CustomAdapter(private val context: Context, private val arrayList: ArrayList<Person>) : BaseAdapter() {
+class CustomAdapter(private val context: Context,
+                    private val arrayList: ArrayList<Person>) : BaseAdapter() {
     private lateinit var txtName: TextView
     private lateinit var txtAddress: TextView
     private lateinit var txtMobile: TextView
@@ -33,11 +34,10 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
-        //val cView: View?
+
         val cView = LayoutInflater.from(context).inflate(R.layout.row_item,
             parent, false)
         txtName = cView.findViewById(R.id.name)
-
         txtAddress = cView.findViewById(R.id.address)
         txtEmail = cView.findViewById(R.id.email)
         txtMobile = cView.findViewById(R.id.mobile)
@@ -52,5 +52,4 @@ class CustomAdapter(private val context: Context, private val arrayList: ArrayLi
             "com.example.aloks2tafeproject"))
         return cView
     }
-
 }
